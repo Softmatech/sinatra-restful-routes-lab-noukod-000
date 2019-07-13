@@ -17,7 +17,6 @@ end
 
 get '/recipe/new' do
   erb :new
-  
 end
 
 end
