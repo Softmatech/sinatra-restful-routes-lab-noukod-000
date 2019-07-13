@@ -2,7 +2,11 @@
 <html>
   <body>
     <form action="/recipes/<%= @recipe.id %>" method="post">
-
+      <input id="hidden" type="hidden" name="_method" value="patch">
+      <h4>Name: <%= @recipe.name %></h4>
+      <label for="name">Edit:</label>
+      <input type="text" id="name" name="name">
+      <h4>Ingredients: <%= @recipe.ingredients %></h4>
     </form>
   </body>
 </html>
