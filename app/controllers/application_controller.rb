@@ -9,4 +9,10 @@ class ApplicationController < Sinatra::Base
     @recipes = Recipe.all
     erb :index
   end
+
+  post '/recipes' do
+    @recipe = Recipe.create(params)
+    redirect to "/recipes/#{@recipe.id}"
+end
+
 end
