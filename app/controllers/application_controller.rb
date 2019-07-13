@@ -29,4 +29,12 @@ get '/recipes/:id/edit' do
   erb :edit
 end
 
+patch '/recipes/:id' do
+  @recipe = Recipe.find(params[:id])
+  @recipe.name == params[:name]
+  @recipe.ingredients = params[:ingredients]
+  @recipe.cook_time = params[:cook_time]
+  @recipe.save
+end
+
 end
